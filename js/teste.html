@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Faça o cadastro dos Voos
+
+<script>
+    var dog1, dog2;
+    var racao, dias;
+
+
+function racao(qtd, x, y){
+    racao = qtd;
+    dog1 = x;
+    dog2 = y;
+    dias = qtd / (x+y);
+
+    console.log("A Racao durará aproximadamente: %.2f", dias);
+  
+
+
+}
+
+racao(25,.400,.200);
+
+// opção A
+
+var numero = [];
+var duracao = [];
+var resp = "s";
+var operador = window.prompt("Qual nome do operador? ")
+document.write("<p> Bem Vindo: " + operador + "<p>")
+resp = prompt("Gostaria de cadastar Voos? ")
+
+numero.push(Number(window.prompt("Qual número do Voo? ")))
+duracao.push(Number(window.prompt("Qual tempo de duração do voo? ")))
+
+
+while(resp != "n"){
+    
+    numero.push(window.prompt("Qual número do Voo? "))
+    duracao.push(window.prompt("Qual tempo de duração do voo? "))
+    resp = window.prompt("Continuar cadastro? ")
+        
+
+}
+console.log(numero);
+console.log(duracao);
+
+
+
+
+for (var i = 0; i< numero.length; i++){
+    console.log("Voo nº " + numero[i] + " com duração de " + duracao[i] + " minutos cadastrado com sucesso!")
+    document.write("<p>Voo nº " + numero[i] + " com duração de " + duracao[i] + " minutos cadastrado com sucesso!<p>")
+}
+
+
+// opção b
+
+var numero = [];
+var duracao = [];
+var cont = 1
+
+for (cont  = 1; cont <= 30; cont ++ ){
+        numero[cont] = cont
+        duracao[cont] = cont + 100
+}
+
+for (var i = 1; i< numero.length; i++){
+    console.log(i+ " Voo nº " + numero[i] + " com duração de " + duracao[i] + " minutos, foi cadastrado com sucesso!")
+    document.write("<p>" + i + " Voo nº " + numero[i] + " com duração de " + duracao[i] + " minutos, foi cadastrado com sucesso!<p>")
+
+
+}
+
+
+
+
+
+
+    </script>
+</body>
+
+
+</html>
+
+
